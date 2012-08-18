@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+# Require libs
+require 'savon'
+
+# The client code
+client = Savon.client "http://localhost:3000/customers/wsdl"
+
+request = client.request :index
+
+puts request.to_hash
